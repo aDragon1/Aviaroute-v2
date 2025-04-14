@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <include
+        layout="@layout/user_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        style="@style/HeaderTextViewStyle"
+        android:text="Ближайший рейс:"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/noFlightIsAddedTextView"
+        style="@style/CommonTextViewStyle"
+        android:layout_marginStart="20dp"
+        android:text="Не добавлено ни одного рейса"
+        android:textSize="16sp"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <include
+        android:id="@+id/flightListItemInclude"
+        layout="@layout/purchased_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/purchaseHistoryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="sans-serif"
+        android:text="История покупок"
+        android:textColor="@color/buttonText"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+</LinearLayout>
